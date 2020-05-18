@@ -10,7 +10,7 @@
 @-moz-document domain("www.luogu.org") {
 .am-btn, .am-badge, .am-panel, .tip-twitter, .am-radius {
     /* 删除让人浮躁的圆角 */
-    /* 希望每位 OIer 不要被掰弯 */
+    /* 希望各位 OIer 不要被掰弯 */
     border-radius: 0px!important;
 }
 .am-badge {
@@ -26,12 +26,10 @@
     /* 删除犇犇和讨论的蓝框框 */
     border: none;
 }
-
-
 }
 
 @-moz-document domain("www.luogu.org") {
-/* === 美化 sidebar 展示位置 === */
+/* === 美化 sidebar === */
 
 @media screen and (max-width: 700px) {
     .lg-footer {
@@ -40,12 +38,18 @@
 }
 @media screen and (min-width: 700px) {
     /* 强行在左边给 sidebar 挤一块位置出来 */
+    .lg-sidebar {
+        max-width: 60px;
+    }
+    .lg-content {
+        margin-left: 60px;
+    }
     div.am-topbar-brand {
         display: none;
     }
     .am-topbar {
         padding-left: 50px;
-        margin-left: 65px;
+        margin-left: 60px;
     }
     .lg-sidebar {
         margin-top: -51px;
@@ -62,7 +66,7 @@
         display: none;
     }
     .lg-footer > .lg-index-tool {
-        margin-left: 65px;
+        margin-left: 60px;
         max-width: calc(100% - 65px);
     }
     .lg-footer > .lg-index-tool {
@@ -102,5 +106,25 @@
 .am-panel-primary {
     /* border: none; */
     background-color: #00000000;
+}
+
+.am-selected
+.am-dropdown
+.am-active
+.am-selected-content
+.am-dropdown-content
+.am-btn-secondary .am-dropdown-toggle,
+.am-btn-secondary .am-active,
+.am-btn-secondary:active {
+    background-color: #5EB95E!important;
+}
+}
+
+@-moz-document url-prefix("http://www.luogu.org/app/ide_frame"), url-prefix("https://www.luogu.org/app/ide_frame") {
+.am-topbar {
+    margin-left: 0px;
+}
+.am-topbar-brand a {
+    color: #fff;
 }
 }
